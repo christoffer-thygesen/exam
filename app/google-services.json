@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "126347043332",
+    "firebase_url": "https://examfirebaseex.firebaseio.com",
+    "project_id": "examfirebaseex",
+    "storage_bucket": "examfirebaseex.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:126347043332:android:7f0a1ea068d49f45",
+        "android_client_info": {
+          "package_name": "yellow.sausages.com.exam"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "126347043332-1fo7pfm49ii4sv27tqhh4hda96hgi94l.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "yellow.sausages.com.exam",
+            "certificate_hash": "30c371ceb861ea66c66549d373060da162d8fab0"
+          }
+        },
+        {
+          "client_id": "126347043332-96fvcd639d7femij57matl9cvulheptp.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBrQpd2y-DcjDXe1o7ylcMD1o0urjFhmEw"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "126347043332-96fvcd639d7femij57matl9cvulheptp.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
