@@ -1,5 +1,6 @@
 package yellow.sausages.com.exam;
 
+import android.content.Context;
 import android.content.Intent;
 import android.provider.ContactsContract;
 import android.support.v7.app.AppCompatActivity;
@@ -18,11 +19,13 @@ public class MainActivity extends AppCompatActivity {
 
     private ListView categoriesListView;
     private ArrayList<String> categories;
+    private Context context;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        context = this;
 
         //init arraylist
         categories = new ArrayList<>();
@@ -37,7 +40,8 @@ public class MainActivity extends AppCompatActivity {
         categories.add("Google Firebase");
         categories.add("Data Storage");
         categories.add("Networking");
-        categories.add("Sensors & External Hardware");
+        categories.add("Sensors");
+        categories.add("External Hardware");
 
         //init arrayAdapter
         ArrayAdapter<String> categoryAdapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, categories);
@@ -56,41 +60,47 @@ public class MainActivity extends AppCompatActivity {
                 Intent intent = null;
 
                 switch (name) {
-                    case "Responsive Layouts":
-                        intent = new Intent(MainActivity.this, ResponsiveLayoutsActivity.class);
-                        break;
                     case "In case they think you should remember everything":
                         setContentView(R.layout.einstein);
                         break;
+                    case "Responsive Layouts":
+                        intent = new Intent(context, ResponsiveLayoutsActivity.class);
+                        break;
                     case "Activities":
-                        intent = new Intent(MainActivity.this, ActivitiesActivity.class);
+                        intent = new Intent(context, ActivitiesActivity.class);
                         //put extra for the new activity
                         intent.putExtra("examEx", "Hello, I come from a previous Activity");
                         break;
                     case "Intents":
-                        intent = new Intent(MainActivity.this, IntentActivity.class);
+                        intent = new Intent(context, IntentActivity.class);
                         intent.putExtra("examEx", "I was supposed to be put here");
                         break;
                     case "Resources":
-                        intent = new Intent(MainActivity.this, ResourcesActivity.class);
+                        intent = new Intent(context, ResourcesActivity.class);
                         break;
                     case "AdapterViews":
-                        intent = new Intent(MainActivity.this, AdapterViewsActivity.class);
+                        intent = new Intent(context, AdapterViewsActivity.class);
                         break;
                     case "Animations":
-                        intent = new Intent(MainActivity.this, AnimationsActivity.class);
+                        intent = new Intent(context, AnimationsActivity.class);
                         break;
                     case "Navigation":
-                        intent = new Intent(MainActivity.this, NavigationActivity.class);
+                        intent = new Intent(context, NavigationActivity.class);
                         break;
                     case "Google Firebase":
-                        intent = new Intent(MainActivity.this, GoogleFirebaseActivity.class);
+                        intent = new Intent(context, GoogleFirebaseActivity.class);
                         break;
                     case "Data Storage":
-                        intent = new Intent(MainActivity.this, DataStorageActivity.class);
+                        intent = new Intent(context, DataStorageActivity.class);
                         break;
                     case "Networking":
-                        intent = new Intent(MainActivity.this, NetworkingActivity.class);
+                        intent = new Intent(context, NetworkingActivity.class);
+                        break;
+                    case "Sensors":
+                        intent = new Intent(context, SensorsActivity.class);
+                        break;
+                    case "External Hardware":
+                        intent = new Intent(context, ExternalHardwareActivity.class);
                         break;
                 }
 

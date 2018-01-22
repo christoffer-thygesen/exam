@@ -61,7 +61,7 @@ public class IntentActivity extends AppCompatActivity {
     }
 
     public void startNewActivity(View view) {
-        Intent intent = new Intent(IntentActivity.this, ActivitiesActivity.class);
+        Intent intent = new Intent(IntentActivity.this, ResponsiveLayoutsActivity.class);
         startActivity(intent);
     }
 
